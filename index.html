@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Unique Coaching Classes - Std 1 to 10, CBSE & GSEB. Maths, Science, English and Social Science. Visnagar.">
+  <title>Unique Coaching Classes | Visnagar</title>
+  <style>
+    :root{
+      --navy:#081b4b;
+      --blue:#1557c0;
+      --cyan:#16b9e8;
+      --gold:#ffbd19;
+      --maroon:#7b123e;
+      --green:#25a65a;
+      --ink:#12213d;
+      --muted:#65728a;
+      --paper:#f7f9fd;
+      --white:#fff;
+      --shadow:0 18px 50px rgba(10,34,84,.13);
+      --radius:24px;
+    }
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .topbar{background:var(--navy);color:#fff;padding:8px 5%;font-size:.88rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .topbar strong{color:var(--gold)}
+    nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid #e8edf5}
+    .nav-inner{max-width:1200px;margin:auto;padding:12px 5%;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900;color:var(--navy)}
+    .brand img{width:50px;height:50px;object-fit:contain;border-radius:14px}
+    .brand span{font-size:1.05rem;line-height:1.1}
+    .brand small{display:block;color:var(--muted);font-weight:600;font-size:.72rem;margin-top:3px}
+    .nav-links{display:flex;gap:20px;align-items:center;font-weight:700;font-size:.92rem}
+    .nav-links a:hover{color:var(--blue)}
+    .nav-cta{background:linear-gradient(135deg,var(--maroon),#b41b5e);color:#fff;padding:11px 17px;border-radius:999px;box-shadow:0 8px 20px rgba(123,18,62,.22)}
+    .menu{display:none;border:0;background:transparent;font-size:1.7rem}
+    .hero{position:relative;overflow:hidden;background:
+      radial-gradient(circle at 80% 15%,rgba(22,185,232,.28),transparent 27%),
+      radial-gradient(circle at 12% 90%,rgba(255,189,25,.2),transparent 28%),
+      linear-gradient(135deg,#06163e 0%,#0c2d70 52%,#123f93 100%);color:#fff}
+    .hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent)}
+    .hero-inner{max-width:1200px;margin:auto;padding:70px 5% 78px;display:grid;grid-template-columns:1.02fr .98fr;gap:42px;align-items:center;position:relative}
+    .pill{display:inline-flex;gap:8px;align-items:center;padding:7px 13px;border:1px solid rgba(255,255,255,.25);border-radius:999px;background:rgba(255,255,255,.08);font-size:.8rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .hero h1{font-size:clamp(2.6rem,6vw,5.4rem);line-height:.98;margin:18px 0 18px;letter-spacing:-.055em}
+    .hero h1 span{color:var(--gold)}
+    .hero p{font-size:1.14rem;color:#dce7ff;max-width:650px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:27px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 21px;border-radius:14px;font-weight:900;border:1px solid transparent;cursor:pointer;transition:.2s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:linear-gradient(135deg,var(--gold),#ff8c13);color:#211500;box-shadow:0 12px 30px rgba(255,189,25,.22)}
+    .btn-light{background:#fff;color:var(--navy)}
+    .btn-outline{border-color:rgba(255,255,255,.32);color:#fff;background:rgba(255,255,255,.06)}
+    .hero-card{background:rgba(255,255,255,.1);padding:12px;border:1px solid rgba(255,255,255,.2);border-radius:30px;box-shadow:0 30px 70px rgba(0,0,0,.25)}
+    .hero-card img{height:410px;width:100%;object-fit:cover;border-radius:22px}
+    .hero-badges{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+    .hero-badge{padding:12px;text-align:center;background:rgba(0,0,0,.18);border-radius:15px;font-weight:800;font-size:.82rem}
+    section{padding:78px 5%}
+    .section-inner{max-width:1200px;margin:auto}
+    .section-head{text-align:center;max-width:760px;margin:0 auto 42px}
+    .eyebrow{color:var(--blue);font-weight:900;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem}
+    h2{font-size:clamp(2rem,4vw,3.1rem);line-height:1.05;margin:9px 0 13px;letter-spacing:-.04em}
+    .section-head p{color:var(--muted);font-size:1.02rem}
+    .stats{margin-top:-30px;position:relative;z-index:5}
+    .stats-grid{max-width:1000px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-radius:22px;box-shadow:var(--shadow);overflow:hidden}
+    .stat{padding:23px;text-align:center;border-right:1px solid #edf0f6}
+    .stat:last-child{border-right:0}
+    .stat b{display:block;font-size:1.45rem;color:var(--navy)}
+    .stat span{font-size:.84rem;color:var(--muted);font-weight:700}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .card{background:#fff;border:1px solid #e9edf4;border-radius:22px;padding:24px;box-shadow:0 10px 30px rgba(10,34,84,.06);transition:.25s}
+    .card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+    .icon{width:52px;height:52px;display:grid;place-items:center;border-radius:15px;background:#eef5ff;font-size:1.55rem;margin-bottom:16px}
+    .card h3{margin:0 0 7px;font-size:1.12rem}
+    .card p{margin:0;color:var(--muted);font-size:.91rem}
+    .about{background:#fff}
+    .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
+    .about-image{border-radius:28px;overflow:hidden;box-shadow:var(--shadow);background:#ddd}
+    .about-image img{width:100%;height:480px;object-fit:cover}
+    .checklist{display:grid;gap:12px;margin:25px 0}
+    .check{display:flex;gap:11px;align-items:flex-start;font-weight:700}
+    .check i{font-style:normal;background:#eaf9f0;color:#168444;width:25px;height:25px;border-radius:50%;display:grid;place-items:center;flex:none}
+    .branches{background:linear-gradient(180deg,#f7f9fd,#edf4ff)}
+    .branch-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .branch{background:#fff;border-radius:22px;padding:26px;border:1px solid #e5eaf2;display:flex;gap:18px;align-items:flex-start}
+    .branch .pin{font-size:1.8rem}
+    .branch h3{margin:0 0 5px}.branch p{margin:0;color:var(--muted)}
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .gallery figure{margin:0;overflow:hidden;border-radius:18px;background:#ddd;aspect-ratio:1/1;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+    .gallery figure:first-child{grid-column:span 2;grid-row:span 2}
+    .gallery img{width:100%;height:100%;object-fit:cover;transition:.4s}
+    .gallery figure:hover img{transform:scale(1.05)}
+    .admission{background:linear-gradient(135deg,#071946,#123d8d);color:#fff}
+    .admission-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start}
+    .admission p{color:#dce7ff}
+    .contact-list{display:grid;gap:12px;margin-top:28px}
+    .contact-item{display:flex;gap:12px;align-items:center;padding:13px 15px;background:rgba(255,255,255,.08);border-radius:14px}
+    form{background:#fff;color:var(--ink);padding:28px;border-radius:25px;box-shadow:0 25px 60px rgba(0,0,0,.18)}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+    label{font-size:.8rem;font-weight:900;color:#394762;display:block;margin-bottom:6px}
+    input,select,textarea{width:100%;padding:13px 14px;border:1px solid #dce3ef;border-radius:12px;outline:none;font:inherit;background:#fbfcff}
+    input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(21,87,192,.1)}
+    textarea{min-height:100px;resize:vertical}
+    .full{grid-column:1/-1}
+    .form-note{font-size:.78rem;color:#748198;margin:12px 0 0}
+    .footer{background:#050f2b;color:#b9c8e8;padding:45px 5% 20px}
+    .footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:35px}
+    .footer h3{color:#fff;margin-top:0}
+    .footer p{margin:7px 0;font-size:.9rem}
+    .footer-bottom{max-width:1200px;margin:30px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:.8rem}
+    .whatsapp{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#20c56a;color:#fff;font-size:1.65rem;box-shadow:0 12px 30px rgba(32,197,106,.35);z-index:80}
+    @media(max-width:900px){
+      .nav-links{display:none}.menu{display:block}
+      .nav-links.open{position:absolute;display:flex;left:0;right:0;top:74px;background:#fff;padding:20px 5%;flex-direction:column;align-items:flex-start;box-shadow:0 20px 30px rgba(0,0,0,.08)}
+      .hero-inner,.about-grid,.admission-grid{grid-template-columns:1fr}
+      .hero-card img{height:350px}
+      .cards{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}
+      .stats-grid{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat{border-bottom:1px solid #edf0f6}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:600px){
+      .topbar{justify-content:center;text-align:center}.brand span{font-size:.9rem}
+      section{padding:58px 5%}.hero-inner{padding-top:50px}.hero-card img{height:280px}
+      .cards,.branch-grid,.gallery,.form-grid,.footer-grid{grid-template-columns:1fr}
+      .gallery figure:first-child{grid-column:auto;grid-row:auto}
+      .stats-grid{grid-template-columns:1fr 1fr}
+      .stat{padding:17px 8px}.stat b{font-size:1.15rem}
+      .hero h1{font-size:2.9rem}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 <strong>UNIQUE COACHING CLASSES</strong> • Where Education Is Simplified</span>
+    <span>📞 7990635901 &nbsp; | &nbsp; 💬 WhatsApp 9998236290</span>
+  </div>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="brand" href="#home">
+        <img src="assets/logo.jpg" alt="Unique Coaching Classes logo">
+        <span>UNIQUE COACHING CLASSES<small>Visnagar • CBSE & GSEB</small></span>
+      </a>
+      <button class="menu" aria-label="Open menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="#about">About</a>
+        <a href="#branches">Branches</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#admission" class="nav-cta">Online Admission</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div>
+          <div class="pill">✨ Premium Learning • Strong Foundations • Future Ready</div>
+          <h1>Learn Better.<br><span>Think Bigger.</span><br>Achieve More.</h1>
+          <p>Quality coaching for <strong>Std 1–10</strong> with focused support in Maths, Science, English and Social Science — for both <strong>CBSE & GSEB</strong>.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#admission">🚀 Apply Online</a>
+            <a class="btn btn-light" href="https://wa.me/919998236290?text=Hello%20Unique%20Coaching%20Classes,%20I%20want%20information%20about%20admission." target="_blank">💬 WhatsApp Us</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <img src="assets/stem-banner.png" alt="Unique Coaching Classes Robotics and Innovation Lab">
+          <div class="hero-badges">
+            <div class="hero-badge">📘 Std 1–10</div>
+            <div class="hero-badge">🎯 CBSE + GSEB</div>
+            <div class="hero-badge">🤖 STEM & Robotics</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stats-grid">
+        <div class="stat"><b>Std 1–10</b><span>All school levels</span></div>
+        <div class="stat"><b>4 Subjects</b><span>Core academic support</span></div>
+        <div class="stat"><b>2 Boards</b><span>CBSE & GSEB</span></div>
+        <div class="stat"><b>2 Branches</b><span>Convenient locations</span></div>
+      </div>
+    </section>
+
+    <section id="courses">
+      <div class="section-inner">
+        <div class="section-head">
+          <div class="eyebrow">What we teach</div>
+          <h2>Strong academics. Smart learning.</h2>
+          <p>Concept clarity, regular practice and exam-focused preparation designed to make learning simpler and more confident.</p>
+        </div>
+        <div class="cards">
+          <div class="card"><div class="icon">➗</div><h3>Mathematics</h3><p>Build strong concepts, calculation skills, problem-solving ability and exam confidence.</p></div>
+          <div class="card"><div class="icon">🔬</div><h3>Science</h3><p>Understand concepts through examples, activities, visual learning and practical thinking.</p></div>
+          <div class="card"><div class="icon">📖</div><h3>English</h3><p>Grammar, vocabulary, writing and communication skills with school-oriented practice.</p></div>
+          <div class="card"><div class="icon">🌍</div><h3>Social Science</h3><p>Clear explanations, important points, revision support and effective answer writing.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="section-inner about-grid">
+        <div class="about-image"><img src="assets/stem-project-1.png" alt="Students at Unique Coaching Classes STEM project"></div>
+        <div>
+          <div class="eyebrow">About Unique Coaching Classes</div>
+          <h2>Where education is simplified.</h2>
+          <p>Unique Coaching Classes, led by <strong>Omsingh Sir M.Sc. B.Ed.</strong>, provides structured academic support for students from Std 1 to 10.</p>
+          <div class="checklist">
+            <div class="check"><i>✓</i><span>CBSE & GSEB focused learning</span></div>
+            <div class="check"><i>✓</i><span>Concept-based teaching and regular practice</span></div>
+            <div class="check"><i>✓</i><span>Maths, Science, English & Social Science</span></div>
+            <div class="check"><i>✓</i><span>STEM, Robotics & Innovation activities</span></div>
+          </div>
+          <a class="btn btn-primary" href="#admission">Join Unique Coaching Classes</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="branches" id="branches">
+      <div class="section-inner">
+        <div class="section-head">
+          <div class="eyebrow">Our locations</div>
+          <h2>Two branches. One vision.</h2>
+          <p>Choose the branch convenient for you and enquire about the right batch for your child.</p>
+        </div>
+        <div class="branch-grid">
+          <div class="branch"><div class="pin">📍</div><div><h3>Branch 1 — Sona Complex</h3><p>74–76, Sona Complex,<br>Visnagar.</p><br><a class="btn btn-outline" style="background:#eef5ff;color:#123f8d;border-color:#dbe7ff;padding:9px 14px" href="tel:+917990635901">Call 7990635901</a></div></div>
+          <div class="branch"><div class="pin">📍</div><div><h3>Branch 2 — Pragati Arcade</h3><p>Pragati Arcade, Mehsana Crossroad,<br>Visnagar.</p><br><a class="btn btn-outline" style="background:#eef5ff;color:#123f8d;border-color:#dbe7ff;padding:9px 14px" href="tel:+917990635901">Call 7990635901</a></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="section-inner">
+        <div class="section-head">
+          <div class="eyebrow">Learning in action</div>
+          <h2>STEM • Robotics • Young Innovators</h2>
+          <p>A glimpse of students building, experimenting, collaborating and creating.</p>
+        </div>
+        <div class="gallery">
+          <figure><img src="assets/stem-project-1.png" alt="Students in robotics lab"></figure>
+          <figure><img src="assets/stem-project-2.png" alt="Students presenting STEM project"></figure>
+          <figure><img src="assets/stem-project-3.png" alt="Students with robotics project"></figure>
+          <figure><img src="assets/stem-project-4.png" alt="Students with STEM model"></figure>
+          <figure><img src="assets/stem-project-5.png" alt="Students with robotics project"></figure>
+          <figure><img src="assets/stem-project-6.png" alt="Students building a robotic vehicle"></figure>
+          <figure><img src="assets/stem-project-7.png" alt="Young innovators STEM project"></figure>
+          <figure><img src="assets/stem-project-8.png" alt="Students with STEM model"></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="admission" id="admission">
+      <div class="section-inner admission-grid">
+        <div>
+          <div class="eyebrow" style="color:#7de3ff">Admissions open</div>
+          <h2>Start your child's learning journey.</h2>
+          <p>Fill the form and submit it. The website will prepare an admission enquiry for WhatsApp so you can send it directly to Unique Coaching Classes.</p>
+          <div class="contact-list">
+            <div class="contact-item">📞 <span><strong>Call:</strong> 7990635901</span></div>
+            <div class="contact-item">💬 <span><strong>WhatsApp:</strong> 9998236290</span></div>
+            <div class="contact-item">🎓 <span><strong>Classes:</strong> Std 1–10</span></div>
+            <div class="contact-item">📚 <span><strong>Boards:</strong> CBSE & GSEB</span></div>
+          </div>
+        </div>
+
+        <form id="admissionForm">
+          <h3 style="margin-top:0;font-size:1.45rem">Online Admission Enquiry</h3>
+          <div class="form-grid">
+            <div><label for="student">Student Name *</label><input id="student" required placeholder="Student's full name"></div>
+            <div><label for="parent">Parent Name *</label><input id="parent" required placeholder="Parent / guardian name"></div>
+            <div><label for="class">Std *</label><select id="class" required><option value="">Select class</option><option>Std 1</option><option>Std 2</option><option>Std 3</option><option>Std 4</option><option>Std 5</option><option>Std 6</option><option>Std 7</option><option>Std 8</option><option>Std 9</option><option>Std 10</option></select></div>
+            <div><label for="board">Board *</label><select id="board" required><option value="">Select board</option><option>CBSE</option><option>GSEB</option></select></div>
+            <div><label for="phone">Parent Mobile *</label><input id="phone" type="tel" required placeholder="10-digit mobile number"></div>
+            <div><label for="branch">Preferred Branch</label><select id="branch"><option>Branch 1 — Sona Complex</option><option>Branch 2 — Pragati Arcade</option></select></div>
+            <div class="full"><label for="subjects">Subjects</label><input id="subjects" placeholder="e.g. Maths, Science"></div>
+            <div class="full"><label for="message">Message</label><textarea id="message" placeholder="Any questions or preferred batch timing?"></textarea></div>
+          </div>
+          <button class="btn btn-primary" style="width:100%;margin-top:16px" type="submit">💬 Submit via WhatsApp</button>
+          <p class="form-note">Your enquiry is sent to WhatsApp number 9998236290. No database is required for this version.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3>UNIQUE COACHING CLASSES</h3>
+        <p>Where Education Is Simplified.</p>
+        <p>Std 1–10 • CBSE & GSEB</p>
+        <p>Maths • Science • English • Social Science</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <p><a href="#courses">Courses</a></p>
+        <p><a href="#about">About Us</a></p>
+        <p><a href="#gallery">Gallery</a></p>
+        <p><a href="#admission">Online Admission</a></p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>Omsingh Sir M.Sc. B.Ed.</p>
+        <p>📞 7990635901</p>
+        <p>💬 9998236290</p>
+        <p>📍 Visnagar, Gujarat</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Unique Coaching Classes. All rights reserved.</span>
+      <span>Designed for learning • Built for the future 🚀</span>
+    </div>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/919998236290?text=Hello%20Unique%20Coaching%20Classes,%20I%20want%20information%20about%20admission." target="_blank" aria-label="WhatsApp">💬</a>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.getElementById("admissionForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const student = document.getElementById("student").value.trim();
+      const parent = document.getElementById("parent").value.trim();
+      const cls = document.getElementById("class").value;
+      const board = document.getElementById("board").value;
+      const phone = document.getElementById("phone").value.trim();
+      const branch = document.getElementById("branch").value;
+      const subjects = document.getElementById("subjects").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      const text =
+`*ONLINE ADMISSION ENQUIRY — UNIQUE COACHING CLASSES*
+
+Student Name: ${student}
+Parent Name: ${parent}
+Std: ${cls}
+Board: ${board}
+Parent Mobile: ${phone}
+Preferred Branch: ${branch}
+Subjects: ${subjects || "Not specified"}
+Message: ${message || "No additional message"}
+
+Please contact me regarding admission and batch details.`;
+
+      window.open("https://wa.me/919998236290?text=" + encodeURIComponent(text), "_blank");
+    });
+  </script>
+</body>
+</html>
